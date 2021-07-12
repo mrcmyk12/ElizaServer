@@ -19,8 +19,8 @@ animalRouter
 	})
 	.post(
 		cors.corsWithOptions,
-		authenticate.verifyUser,
-		authenticate.verifyAdmin,
+		//authenticate.verifyUser,
+		//authenticate.verifyAdmin,
 		(req, res, next) => {
 			Animal.create(req.body)
 				.then((animal) => {
