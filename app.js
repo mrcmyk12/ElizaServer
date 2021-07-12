@@ -23,6 +23,7 @@ connect.then(
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const animalRouter = require("./routes/animalRouter");
+const uploadRouter = require("./routes/uploadRouter");
 
 var app = express();
 
@@ -58,6 +59,7 @@ app.use("/ausers", usersRouter);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/animals", animalRouter);
+app.use("/imageUpload", uploadRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
